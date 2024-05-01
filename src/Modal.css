@@ -12,29 +12,45 @@
   
   /* Modal Background */
   .modal-background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 10; /* Ensure the background is behind the modal */
   }
   
-  /* Modal Content */
-  .modal-content {
+  /* Custom Modal */
+  .custom-modal {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
+    width: 50%;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    position: relative; /* Ensure the close button is positioned correctly */
+    z-index: 20; /* Ensure the modal is above the background */
   }
   
-  /* Close Button */
+  /* Modal Header */
+  .modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+  }
+  
+  .modal-title {
+    margin: 0;
+  }
+  
   .close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
     font-size: 20px;
+  }
+  
+  /* Modal Body */
+  .modal-body {
+    padding: 15px;
   }
   
